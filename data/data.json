@@ -554,11 +554,31 @@
       "id": 50,
       "Year": "2008",
       "Value": "7.5",
-      "Type": "Adultos",
+      "Type": "Adulto",
       "Trailer": "https://www.youtube.com/watch?v=8ugaeA-nMTc",
       "Poster": "https://res.cloudinary.com/dg2wmqkks/image/upload/v1721930076/peliculas/ironman-p.jpg",
       "Description": "Heroe, narcisita, pero muy carismatico",
       "Carrusel": "https://res.cloudinary.com/dg2wmqkks/image/upload/v1721930076/peliculas/ironman-cartel.jpg"
+    },
+    {
+      "id": 51,
+      "Year": "",
+      "Value": "",
+      "Type": "",
+      "Trailer": "",
+      "Poster": "",
+      "Description": "",
+      "Carrusel": ""
+    },
+    {
+      "id": 52,
+      "Year": "2010",
+      "Value": "8.5",
+      "Type": "Adulto",
+      "Trailer": "https://www.youtube.com/watch?v=vKKu-Wt7O2Q",
+      "Poster": "https://res.cloudinary.com/dg2wmqkks/image/upload/v1721936014/peliculas/thor_poster.jpg",
+      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet ornare tellus eget aliquam. Vestibulum consectetur varius varius. Praesent hendrerit fermentum tincidunt. Sed mollis lectus vel nulla gravida, quis tincidunt augue sollicitudin. Etiam lacinia, nibh sit amet blandit vehicula, erat eros suscipit orci, sed semper lectus augue eget mauris. Suspendisse sed velit ac dui accumsan congue. Morbi eget molestie quam.",
+      "Carrusel": "https://res.cloudinary.com/dg2wmqkks/image/upload/v1721936015/peliculas/thor-cartel.jpg"
     }
   ]
 }

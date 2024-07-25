@@ -1,6 +1,7 @@
 export const searchMovie = (titulo, peliculas, container) => {
 
-  const mipeli = peliculas.find((movie) => movie.Title === titulo);
+  console.log(peliculas)
+  const mipeli = peliculas.find((movie) => movie.Title.toLowerCase() === titulo.toLowerCase());
   
   console.log(mipeli)
 

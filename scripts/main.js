@@ -2,6 +2,7 @@ import { movies } from "./helpers/urls.js";
 import { getData } from "./helpers/getData.js";
 import { showData } from "./showdata.js";
 import { postData } from "./helpers/postData.js";
+import { searchMovie } from "./searchMovie.js";
 
 const peliculas = await getData(movies);
 
@@ -9,6 +10,7 @@ const peliculas = await getData(movies);
 const infantiles = document.getElementById('infantil');
 const series = document.getElementById('series');
 const adultos = document.getElementById('adultos');
+const principal = document.getElementById('principal');
 
 //botones para abrir y cerrar el modal, mas el modal
 const crear = document.getElementById('crear');
@@ -55,7 +57,10 @@ const buscapeli = document.getElementById('busqueda')
 
 btnbuscar.addEventListener("click",() => {
     buscapeli.style.display = "block"
-    buscapeli.addEventListener("change",()=>{
-        console.log(buscapeli.value)
-    })
+})
+
+buscapeli.addEventListener("change",(e)=>{
+    console.log(buscapeli.value)
+    buscapeli.style.display = "none"
+    searchMovie(buscapeli.value,peliculas,principal)
 })

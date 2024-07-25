@@ -1,20 +1,26 @@
 import { movies } from "./helpers/urls.js";
 import { getData } from "./helpers/getData.js";
 import { showData } from "./showdata.js";
-import {postData} from "./helpers/postData.js";
+import { postData } from "./helpers/postData.js";
 
 const peliculas = await getData(movies);
 
-
+//secciones para publicar las peliculas
 const infantiles = document.getElementById('infantil');
 const series = document.getElementById('series');
 const adultos = document.getElementById('adultos');
+
 //botones para abrir y cerrar el modal, mas el modal
 const crear = document.getElementById('crear');
 const cerrar = document.getElementById('close');
 const modal = document.getElementById('modal');
 
+//formulario para agregar una nueva pelicula
 const formularocrear = document.getElementById('create-movie');
+
+showData(peliculas, series, "serie")
+showData(peliculas, infantiles, "Infantil")
+showData(peliculas, adultos, "Adulto")
 
 formularocrear.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -30,9 +36,9 @@ formularocrear.addEventListener("submit", async (e) => {
         "Description": document.getElementById('descrip').value,
         "Carrusel": document.getElementById('carrusel').value
     }
-    await postData(movies,newmovie)
+    await postData(movies, newmovie)
     modal.close();
-    npeliculas ++;
+    npeliculas++;
 })
 
 crear.addEventListener("click", () => {
@@ -43,6 +49,13 @@ cerrar.addEventListener("click", function () {
     favDialog.close();
 });
 
-showData(peliculas, series, "serie")
-showData(peliculas, infantiles, "Infantil")
-showData(peliculas, adultos, "Adulto")
+//Input para buscar una pelicula
+const btnbuscar = document.getElementById('busca')
+const buscapeli = document.getElementById('busqueda')
+
+btnbuscar.addEventListener("click",() => {
+    buscapeli.style.display = "block"
+    buscapeli.addEventListener("change",()=>{
+        console.log(buscapeli.value)
+    })
+})

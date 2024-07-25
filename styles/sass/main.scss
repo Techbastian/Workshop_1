@@ -1,0 +1,32 @@
+$color-principal: black;
+$color-secundary: red;
+$color-letter: white;
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $color-principal;
+    color: $color-letter;
+}
+
+#title h1{
+    color: $color-secundary;
+}
+
+.tipos{
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+
+.tipos img{
+    width: 200px;
+}
+
+.footer{
+    display: inline-block;
+}

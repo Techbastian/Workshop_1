@@ -1,6 +1,6 @@
 //  Post es para agregar información en la data.json
 
-const postData = async (url, data) => {
+export const postData = async (url, data) => {
   try {
     await fetch(url, {
       method: 'POST',
@@ -9,7 +9,7 @@ const postData = async (url, data) => {
         'content-Type': 'aplication/json'
       }
     }).then(
-      alert('elemento enviado')
+      alert('La pelicula fue agregada con exito')
     );
     // const data = await respuesta.json();
     // console.log(data);
@@ -18,5 +18,3 @@ const postData = async (url, data) => {
     console.log("Hay un error en el sistema", error);
   }
 }
-
-export default postData;
